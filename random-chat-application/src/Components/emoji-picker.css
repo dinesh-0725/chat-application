@@ -1,0 +1,11 @@
+/* emoji-picker.css */
+
+/* Hide the dropdown arrow completely */
+.ant-select-arrow {
+  display: none !important;
+}
+
+/* Optional: Adjust the suffix icon's position if necessary */
+.ant-select-selection-item {
+  display: none; /* Hide the default selection text if any */
+}

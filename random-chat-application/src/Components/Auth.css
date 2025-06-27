@@ -1,0 +1,560 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+body {
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to right, #B0D2E4, #5B9BC7, #B599D4, #EDEDED);
+    /* background-image:
+        radial-gradient(circle at 20% 20%, rgba(255, 255, 0, 0.459), transparent 30%),
+        radial-gradient(circle at 80% 80%, rgba(0, 255, 255, 0.555), transparent 30%),
+        radial-gradient(circle at 40% 60%, rgba(255, 0, 255, 0.5), transparent 30%),
+        radial-gradient(circle at 60% 40%, rgba(0, 128, 0, 0.5), transparent 30%); */
+    background-size: 200% 200%;
+    /* Adjust the size to cover more of the body */
+    background-position: center center;
+    /* Center the background */
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    color: black;
+    justify-content: center;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    /* Center items vertically */
+    justify-content: space-between;
+    padding: 10px 20px;
+    backdrop-filter: blur(8px);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    color: #000;
+    border: 1px solid wheat;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar-title {
+    margin: 0;
+}
+
+.search-box {
+    padding: 0.5rem;
+    margin-left: 1rem;
+    border: none;
+    border-bottom: 1px solid rgb(8, 8, 8);
+    outline: none;
+}
+
+.nav-links {
+    flex-grow: 1;
+    /* Allow nav-links to take remaining space */
+}
+
+.nav-links ul {
+    display: flex;
+    height: 50px;
+    /* Set a height for the nav links */
+    list-style: none;
+    margin: 0;
+    font-weight: 800;
+    padding: 0;
+}
+
+.nav-links ul li {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    /* Reset padding for consistent height management */
+    transition: background 0.3s ease;
+}
+
+
+.nav-links ul li a {
+    color: #090909;
+    text-decoration: none;
+    transition: all 0.5s ease-in;
+    padding: 15px 0;
+    /* Add padding to links instead of li for spacing */
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-right: 3%;
+    color: #000;
+}
+
+/* Responsive Styles */
+@media (max-width: 800px) {
+    nav {
+        backdrop-filter: blur(9px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        padding: 15px 20px;
+        border-radius: 8px;
+    }
+
+    .nav-links {
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1;
+        border-radius: 8px;
+        display: none;
+        /* Ensures it's hidden initially */
+    }
+
+
+    .nav-links ul li:hover {
+        background: repeating-radial-gradient(circle, #5B9BC7, #B599D4);
+    }
+
+    .nav-links.active {
+        display: block;
+    }
+
+    .nav-links ul {
+        list-style: none;
+        margin: 0;
+        padding: 10px 0;
+        /* Adjust padding for spacing within the red background */
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-icon {
+        display: block;
+        margin-right: 30px;
+    }
+}
+
+
+@media (max-width: 1000px) {
+    .search-box {
+        display: none;
+    }
+}
+
+
+
+h2 u {
+    text-decoration-color: orange;
+    text-decoration-thickness: 3px;
+    
+}
+
+.whole-div {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 400px;
+    border-radius: 52% 48% 33% 67% / 38% 45% 55% 62%;
+
+    box-shadow: inset 10px 10px 10px rgba(96, 93, 97, 0.05),
+        15px 25px 10px rgba(78, 26, 95, 0.1),
+        15px 20px 20px rgba(52, 14, 64, 0.1),
+        inset -10px -10px 15px rgba(82, 66, 66, 0.5);
+    transition: 0.5s;
+    padding: 40px;
+    gap: 15px;
+    text-align: center;
+    margin: 20px auto;
+    animation: slideUp 1s ease-out;
+}
+
+    @keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+.whole-div::before,
+.whole-div::after {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.whole-div::before {
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 85px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0.9;
+}
+
+.whole-div::after {
+    content: '';
+    position: absolute;
+    top: 90px;
+    left: 110px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0.9;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: black;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 24px;
+}
+
+h1 u {
+    text-decoration-color: orange;
+    text-decoration-thickness: 3px;
+}
+
+input {
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    max-width: 300px;
+    border: none;
+    background: transparent;
+    border-bottom: 2px solid rgb(9, 9, 9);
+    outline: none;
+    font-weight: bold;
+    font-size: 20px;
+    transition: border-color 0.3s ease;
+    color: black;
+}
+
+input::placeholder {
+    color: rgba(6, 6, 6, 0.7) !important;
+}
+
+input:focus {
+    font-weight: bold;
+}
+
+.input-container {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 20px;
+}
+
+.input-label {
+    position: absolute;
+    left: 15px;
+    /* Adjusted for better alignment */
+    top: 15px;
+    font-weight: bold;
+    font-size: 16px;
+    color: rgba(7, 7, 7, 0.7);
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+input:focus+.input-label,
+input:not(:placeholder-shown)+.input-label {
+    top: -0px;
+    font-size: 12px;
+}
+
+button {
+    margin: 10px 0;
+    padding: 10px;
+    background: linear-gradient(45deg, #ff9500, red);
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: linear-gradient(45deg, red, #ff9500);
+    /* Maintain gradient on hover */
+    transform: translateY(-2px);
+    transition: background-color 0.7s ease, transform 0.2s ease;
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+.decorative-dot {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    animation: scaleAnimation 1.5s ease-in-out infinite;
+    transition: all 0.5s smooth;
+    z-index: 999;
+}
+
+.dot-orange {
+    background-color: orange;
+    top: 20px;
+    left: 20px;
+    border-radius: 50%;
+    transition: all 1s;
+}
+
+.dot-blue {
+    background-color: blue;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50%;
+    transition: all 1s;
+}
+
+/* 
+.dot-purple {
+    background-color: rgb(255, 0, 0);
+    top: 20px;
+    right: 20px;
+    border-radius: 50%;
+}
+
+.dot-green {
+    background-color: rgb(255, 0, 195);
+    bottom: 20px;
+    left: 20px;
+    border-radius: 50%
+} */
+
+.whole-div:hover {
+    transform: scale(1.05);
+    border-radius: 1% 448% 1% 467% / 38% 45% 55% 62%;
+    /* From .drop */
+    box-shadow: inset 10px 10px 10px rgba(242, 239, 243, 0.341),
+        15px 25px 10px rgba(255, 255, 255, 0.1),
+        15px 20px 20px rgba(63, 16, 79, 0.1),
+        inset -10px -10px 15px rgba(152, 149, 149, 0.5);
+}
+
+@media (max-width: 850px) {
+    .whole-div {
+        width: 100%;
+        padding: 15px;
+        box-shadow: none;
+        backdrop-filter: none;
+        border-radius: 8px;
+        margin-top: -5vh;
+        color: black;
+        border-radius: 52% 48% 73% 73% / 38% 45% 55% 62%;
+
+        box-shadow: inset 10px 10px 10px rgba(96, 93, 97, 0.05),
+            15px 25px 10px rgba(78, 26, 95, 0.1),
+            15px 20px 20px rgba(52, 14, 64, 0.1),
+            inset -10px -10px 15px rgba(169, 168, 168, 0.5);
+        transition: 0.5s;
+        border-color: rgba(255, 255, 255, 0.8);
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    input,
+    button {
+        max-width: calc(100% - 20px);
+        width: auto;
+    }
+}
+
+
+.btns {
+    position: fixed;
+    /* Fixed position keeps it at the same place on the screen */
+    right: 30%;
+    /* Adjusts button to be responsive to screen size */
+    bottom: 20%;
+    /* Places button slightly above the bottom */
+    width: 120px;
+    height: 120px;
+    background: #c61dff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+    font-weight: 900;
+    line-height: 1.2em;
+    letter-spacing: 0.1em;
+    font-size: 0.8em;
+    transition: 0.25s;
+    text-align: center;
+    box-shadow: inset 10px 10px 10px rgba(190, 1, 254, 0.05),
+        15px 25px 10px rgba(190, 1, 254, 0.1),
+        15px 20px 20px rgba(190, 1, 254, 0.1),
+        inset -10px -10px 15px rgba(255, 255, 255, 0.5);
+    border-radius: 44% 56% 65% 35% / 57% 58% 42% 43%;
+}
+
+.btns::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 30px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0.45;
+}
+
+.btns.signup {
+    bottom: 35%;
+    /* Adjusted bottom positioning */
+    right: 30%;
+    /* Slightly moved to be aligned with the primary button */
+    width: 80px;
+    height: 80px;
+    border-radius: 49% 51% 52% 48% / 63% 59% 41% 37%;
+    background: #01b4ff;
+    box-shadow: inset 10px 10px 10px rgba(1, 180, 255, 0.05),
+        15px 25px 10px rgba(1, 180, 255, 0.1),
+        15px 20px 20px rgba(1, 180, 255, 0.1),
+        inset -10px -10px 15px rgba(255, 255, 255, 0.5);
+}
+
+.btns.signup::before {
+    left: 20px;
+    width: 15px;
+    height: 15px;
+}
+
+.btns:hover {
+    border-radius: 50%;
+}
+
+.footer {
+    width: 100%;
+    /* Set the width to 100% */
+    background-color: transparent;
+    /* Optional: Set a background color for visibility */
+    text-align: center;
+    /* Center the text */
+    padding: 10px 0;
+    /* Optional: Add some padding */
+    position: absolute;
+    /* Position relative to avoid overflow */
+    bottom: -0px;
+    left: 0;
+    /* Align to the bottom */
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    font-weight: bolder;
+    color: #000;
+    font-size: large;
+    border: 1PX solid whitesmoke;
+}
+
+
+.whole-div:hover .sparkle {
+    --x: calc(-50px + 100 * random());
+    --y: calc(-50px + 100 * random());
+}
+
+@media (max-width: 1500px) {
+
+    .btns {
+        right: 25%;
+    }
+
+    .btns.signup {
+        right: 25%;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .btns {
+        right: 15%;
+    }
+
+    .btns.signup {
+        right: 15%;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .btns {
+        right: 10%;
+    }
+
+    .btns.signup {
+        right: 10%;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .btns {
+        right: 0%;
+    }
+
+    .btns.signup {
+        right: 0%;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .whole-div {
+        border-radius: 52% 48% 73% 73% / 38% 45% 55% 62%;
+    }
+
+    .btns {
+        display: none;
+    }
+
+    .btns.signup {
+        display: none;
+    }
+}
+
+.signlinks2 {
+    display: none;
+    /* Hidden by default */
+}
+
+/* Media query for screen width of 500px or less */
+@media (max-width: 500px) {
+    .signlinks2 {
+        display: block;
+        /* Show the signlinks2 element */
+        color: black;
+        /* Ensure the text color is set */
+        margin-top: -50px;
+        /* Maintain any necessary spacing */
+        text-align: center;
+        /* Center the text, optional */
+    }
+}
