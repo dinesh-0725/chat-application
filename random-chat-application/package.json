@@ -40,6 +40,10 @@
     
     "web-vitals": "^2.1.4"
   },
+
+
+
+  
   "scripts": {
     "start": "cross-env HTTPS=true react-scripts start",
     "build": "cross-env HTTPS=true react-scripts build",
@@ -75,6 +79,7 @@
     "tailwindcss": "^3.4.16"
   }
 }
+
 
 
 
