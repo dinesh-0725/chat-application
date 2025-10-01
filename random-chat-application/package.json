@@ -46,8 +46,6 @@
     "test": "cross-env HTTPS=true react-scripts test",
     "eject": "react-scripts eject"
   },
-
-
   
   "eslintConfig": {
     "extends": [
@@ -78,6 +76,7 @@
     "tailwindcss": "^3.4.16"
   }
 }
+
 
 
 
